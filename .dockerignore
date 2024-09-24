@@ -30,3 +30,9 @@ docker-compose.yml
 .git
 .gitignore
 .DS_Store
+
+# Ignore others
+.github
+.gitea
+.vscode
+.idea
