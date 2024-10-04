@@ -39,7 +39,7 @@ jobs:
 
       - name: Replace base url
         run: |
-          sed -i 's|base: \"/\"|base: \"/galusek-k-and-k/\"|g' astro.config.mjs
+          sed -i 's|base: \"/\"|base: \"/matiasg19-website/\"|g' astro.config.mjs
 
       - name: Build
         run: npm run build
