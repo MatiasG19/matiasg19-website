@@ -6,7 +6,7 @@ on:
       - "**"
 
 jobs:
-  Build-Test:
+  build-test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -15,7 +15,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20.x
+          node-version: 22.x
 
       - name: Install app dependencies
         run: npm ci
@@ -25,3 +25,15 @@ jobs:
 
       - name: Format
         run: npm run format-check
+
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build
+        run: docker build -t matiasg19-website .
+
+      - name: Run
+        run: docker run --rm matiasg19-website
