@@ -7,9 +7,11 @@ Website for [matiasg19.de](https://www.matiasg19.de)
 ## Docker
 
 ```sh
+docker build -t matiasg19-website .
+```
+
+```sh
 docker run -d \
 -p 8000:80 \
---restart unless-stopped \
---network nginx-proxy-manager-app_default \
---name $REPO_NAME $REPO_NAME
+--name matiasg19-website matiasg19-website
 ```
