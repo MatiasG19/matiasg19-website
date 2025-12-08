@@ -17,7 +17,7 @@
     "@astrojs/mdx": "^4.3.12",
     "@astrojs/rss": "^4.0.14",
     "@astrojs/sitemap": "^3.6.0",
-    "astro": "^5.16.3",
+    "astro": "^5.16.4",
     "typescript": "^5.9.3"
   },
   "engines": {
@@ -25,7 +25,7 @@
     "npm": ">= 11"
   },
   "devDependencies": {
-    "prettier": "^3.7.3",
+    "prettier": "^3.7.4",
     "prettier-plugin-astro": "^0.14.1"
   }
 }
