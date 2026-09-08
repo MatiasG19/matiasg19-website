@@ -1,10 +1,10 @@
-FROM node:26.5.1 AS build
+FROM node:26.8.1 AS build
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
 RUN npm run build
 
-FROM nginx:1.31.3 AS runtime
+FROM nginx:1.31.5 AS runtime
 COPY --from=build /app/dist /usr/share/nginx/html
 EXPOSE 8080
